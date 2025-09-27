@@ -1,0 +1,8 @@
+idr = float(input("Masukkan jumlah uang dalam IDR: "))
+
+usd = idr / 15000   # 1 USD = 15,000 IDR
+jpy = idr / 100     # 1 JPY = 100 IDR
+
+print("Jumlah dalam IDR :", idr, "Rp")
+print("Konversi ke USD  :", usd, "USD")
+print("Konversi ke JPY  :", jpy, "JPY")
