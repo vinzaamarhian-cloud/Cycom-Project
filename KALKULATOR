@@ -1,0 +1,16 @@
+Print("KALKULATOR")
+angka_1 = int(input("masukan angka 1 : "))
+angka_2 = int(input("masukan angka 2 : "))
+operasi = input("masukan operasi : ")
+if operasi == "penjumlahan" :
+  print (angka_1 + angka_2)
+elif operasi == "pengurangan" :
+  print(angka_1 - angka_2 )
+elif operasi == "perkalian" :
+  print(angka_1*angka_2)
+elif operasi == "pembagian" :
+  print(angka_1/angka_2)
+elif operasi == "modulus" : 
+  print(angka_1%angka_2)
+else :
+  print("Operasi tersebut tidak tersedia.")
