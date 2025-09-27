@@ -1,0 +1,43 @@
+def celsius_to_fahrenheit(c):
+    return (c * 9/5) + 32
+
+def celsius_to_kelvin(c):
+    return c + 273.15
+
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5/9
+
+def fahrenheit_to_kelvin(f):
+    return (f - 32) * 5/9 + 273.15
+
+def kelvin_to_celsius(k):
+    return k - 273.15
+
+def kelvin_to_fahrenheit(k):
+    return (k - 273.15) * 9/5 + 32
+
+
+print("=== Program Konversi Suhu ===")
+print("1. Celsius ke Fahrenheit dan Kelvin")
+print("2. Fahrenheit ke Celsius dan Kelvin")
+print("3. Kelvin ke Celsius dan Fahrenheit")
+
+pilihan = int(input("Pilih konversi (1/2/3): "))
+
+if pilihan == 1:
+    c = float(input("Masukkan suhu (°C): "))
+    print(f"{c} °C = {celsius_to_fahrenheit(c):.2f} °F")
+    print(f"{c} °C = {celsius_to_kelvin(c):.2f} K")
+
+elif pilihan == 2:
+    f = float(input("Masukkan suhu (°F): "))
+    print(f"{f} °F = {fahrenheit_to_celsius(f):.2f} °C")
+    print(f"{f} °F = {fahrenheit_to_kelvin(f):.2f} K")
+
+elif pilihan == 3:
+    k = float(input("Masukkan suhu (K): "))
+    print(f"{k} K = {kelvin_to_celsius(k):.2f} °C")
+    print(f"{k} K = {kelvin_to_fahrenheit(k):.2f} °F")
+
+else:
+    print("Pilihan tidak valid.")
