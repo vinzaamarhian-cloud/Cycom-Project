@@ -1,0 +1,18 @@
+angka = int(input("Masukkan angka: "))
+
+prime = True 
+
+if angka <= 1:
+    prime = False
+else:
+    i = 2
+    while i * i <= angka:
+        if angka % i == 0:
+            prime = False
+            break
+        i += 1
+
+if prime:
+    print("Angka", angka, "adalah bilangan prima")
+else:
+    print("Angka", angka, "bukan bilangan prima")
