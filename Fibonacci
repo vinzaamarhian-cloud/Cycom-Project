@@ -1,0 +1,14 @@
+n = int(input("masukkan angka bulat positif:"))
+a, b = 0, 1
+if n <= 0:
+    print("Masukkan angka bulat positif")
+elif n == 1:
+    print(a)
+else:
+    print(a, end=" ")
+    print(b, end=" ")
+    for i in range(2, n):
+        angka_selanjutnya = a+b
+        print(angka_selanjutnya, end=" ")
+        a = b
+        b = angka_selanjutnya
