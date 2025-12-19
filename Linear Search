@@ -1,7 +1,11 @@
 def linear_search(arr, target):
+    count = 0
     for i in range(len(arr)):
+        count += 1
         if arr[i] == target:
+            print("Jumlah perulangan:", count)
             return i
+    print("Jumlah perulangan:", count)
     return -1
     
 arr = [15, 8, 23, 42, 7, 31, 19, 3]
