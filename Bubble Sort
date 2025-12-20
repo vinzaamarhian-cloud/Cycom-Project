@@ -1,0 +1,19 @@
+def bubble_sort_ascending(arr, n):
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if arr[j] > arr[j+1]:
+                temp = arr[j]
+                arr[j], arr[j+1] = arr[j+1], temp
+    return arr
+def bubble_sort_descending(arr, n):
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if arr[j] < arr[j+1]:
+                temp = arr[j]
+                arr[j], arr[j+1] = arr[j+1], temp
+    return arr
+
+arr = [78, 92, 65, 88, 71, 95, 82]
+n = len(arr)
+print("ascending: ", bubble_sort_ascending(arr.copy(), n))
+print("descending: ", bubble_sort_descending(arr.copy(), n))
