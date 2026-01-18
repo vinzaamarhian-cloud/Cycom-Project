@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <link rel="stylesheet" href="static/style.css">
+        <title>{{ sekbid.nama }}</title>
+    </head>
+    <body>
+        <h1 class="judul-struktur">{{ sekbid.nama }}</h1>
+        <p class="bidang-text">{{ sekbid.bidang }}</p>
+        <ul class="sekbid-list">
+            {% for jabatan, nama in sekbid.anggota %}
+            <li>
+                <strong>{{ jabatan }}</strong> : {{ nama }}
+            </li>
+            {% endfor %}
+        </ul> 
+
+        <a href="/" class="back-link">Kembali</a>
+    </body> 
+</html>
+
