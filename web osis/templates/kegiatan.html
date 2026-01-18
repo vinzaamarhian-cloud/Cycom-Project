@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}
+<title>Events</title>
+{% endblock title %}
+
+{% block content %}
+<form method="get">
+    <label for="events">Kegiatan: </label>
+    <input
+        type="text"
+        name="search"
+        placeholder="Cari kegiatan..."
+        value="{{ request.args.get('search', '') }}"
+        id="events"
+    >
+
+    <select name="kategori">
+        <option value="">Semua Kategori</option>
+        <option value="pendidikan" {% if request.args.get('kategori') == 'pendidikan' %}selected{% endif %}>Pendidikan</option>
+        <option value="sosial" {% if request.args.get('kategori') == 'sosial' %}selected{% endif %}>Sosial</option>
+        <option value="olahraga" {% if request.args.get('kategori') == 'olahraga' %}selected{% endif %}>Olahraga</option>
+        <option value="teknologi" {% if request.args.get('kategori') == 'teknologi' %}selected{% endif %}>Teknologi</option>
+        <option value="lingkungan" {% if request.args.get('kategori') == 'lingkungan' %}selected{% endif %}>Lingkungan</option>
+    </select>
+    <div class="btn">
+        <button type="submit">Filter</button>
+    </div>
+</form>
+<br>
+
+<article>
+    <ul>
+        {% for k in kegiatan %}
+        <li>
+            <strong>{{ k.nama }}</strong><br>
+            Kategori: {{ k.kategori }}<br>
+            Tanggal: {{ k.tanggal }}<br> <br>
+            <div class="box">
+                <a href="/kegiatan/{{ k.id }}"> Detail</a>
+            </div>
+            <br>
+        </li>
+        <hr>
+    {% else %}
+        <p>Kegiatan tidak ditemukan.</p>
+    {% endfor %}
+    </ul>
+</article>
+
+{% endblock content %}
