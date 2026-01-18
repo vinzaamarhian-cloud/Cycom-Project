@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}
+<title>Pengurus</title>
+{% endblock title %}
+
+{% block content %}
+<h2>Badan Pengurus Harian</h2><br>
+
+<div class="box">
+    <a href="/pengurus?sort=nama">Urutkan Nama</a>
+    <a href="/pengurus?sort=jabatan">Urutkan Jabatan</a>
+</div><br>
+
+<ul class="box1">
+    {% for p in pengurus %}
+        <li>{{ p.nama }} - {{ p.jabatan }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
