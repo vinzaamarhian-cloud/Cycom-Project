@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+}
+nav{
+    background-color: rgba(245, 245, 245, 0.64);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.208); 
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(9, 62, 220);
+    margin-right: auto;
+}
+nav a:hover{
+    background-color: #e9e5e588;
+    color: rgb(30, 2, 109);
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(245, 245, 245, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+.box1 li{
+    background-color: rgba(245, 245, 245, 0.64);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); 
+    height: 100%;
+    padding: 60px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(9, 62, 220);
+}
+
+.box a{
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color:#a80e2d;
+    color: white;
+    border-radius: 50px;
+    padding: 0.6rem 1.6rem;
+    text-decoration: none;
+}
+
+.box a:hover{
+    background-color: #860101;
+}
+
+.btn button{
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    border:hsl(from color h s l);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: rgba(245, 245, 245, 0.64);
+    color: rgb(10, 18, 168);
+    border-radius: 50px;
+    padding: 0.6rem 1.6rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.315)
+}
+.btn button:hover{
+    background-color: #e9e5e588;
+    transform: translateY(-2px);
+}
+
