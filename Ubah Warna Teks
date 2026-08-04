@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UbahTeks</title>
+        <style>
+            #teksUtama{
+                font-size: 24px;
+                font-family: sans-serif;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The Story of an Old Dog</h1>
+        <p id="teksUtama">Anjing tua itu mengibaskan ekornya saat mendengar suara kunci berputar di pintu depan rumah.</p>
+        <button onclick="ubahTeks()">Click Me to Continue The Story!</button>
+
+        <script>
+            function ubahTeks(){
+                const teks = document.getElementById("teksUtama");
+                teks.innerHTML = "Ia tahu persahabatannya selama sepuluh tahun akhirnya berlanjut dengan pelukan hangat saat pemiliknya melangkah masuk.";
+                teks.style.color = "orange";
+            }
+        </script>
+    </body>
+</html>
