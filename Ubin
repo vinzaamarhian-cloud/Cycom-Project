@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long panjang, lebar;
+    cout << "Masukkan panjang dan lebar lantai: ";
+    cin >> panjang >> lebar;
+    
+    long long fpb = gcd(panjang, lebar);
+    long long panjang_baru;
+    long long lebar_baru;
+    if(fpb <= 1){
+        panjang_baru = panjang * 2;
+        lebar_baru = lebar * 2;
+    } else{
+        panjang_baru = panjang / fpb;
+        lebar_baru = lebar / fpb;
+        
+        panjang_baru *= (fpb + 1);
+        lebar_baru *= (fpb + 1);
+    }
+    
+    long long hasil = (panjang_baru * lebar_baru) - (panjang * lebar);
+    cout << hasil;
+    
+    return 0;
+}
